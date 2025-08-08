@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bukit Harapan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css"> 
+    <style>
+        /* CSS untuk navbar responsif */
+        @media (max-width: 700px) {
+            #nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #1A0746;
+                padding: 1rem;
+                z-index: 1000;
+            }
+            #nav-menu.active {
+                display: block;
+            }
+            #nav-menu ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            #nav-menu ul li {
+                width: 100%;
+            }
+            #nav-menu ul li a {
+                display: block;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        /* Tambahkan transisi untuk efek halus */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        /* Warna teks saat aktif */
+        .nav-link.active {
+            color: #f4a222;
+            font-weight: bold;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-200">
+    <div class="relative h-[400px]">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!-- Gambar Latar -->
+        <img 
+            alt="Background image of a park with a clock tower and trees" 
+            class="w-full h-full object-cover absolute inset-0 z-0" 
+            src="images/view.jpg" 
+        />
+
+        <!-- Overlay Gradasi -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1A0746] to-transparent z-10"></div>
+
+   <!-- 🔥 Navbar transparan dengan garis atas dan burger menu -->
+<header class="fixed top-0 left-0 right-0 z-50 border-t-4 border-[#f4a222] shadow-lg bg-blue-500/10 backdrop-blur-md rounded-b-xl">
+    <div class="container mx-auto flex items-center justify-between p-2">
+        <div class="flex items-center">
+            <img 
+                alt="Logo of Jeneponto" 
+                class="h-12 w-12 mr-4 rounded-full shadow-md hover:rotate-12 transition-transform duration-300" 
+                src="images/logo.png" 
+            />
+            <div>
+                <h1 class="text-[#f4a222] text-xl font-bold tracking-wider">Bukit Harapan</h1>
+                <p class="text-white text-sm opacity-80">Kota Parepare</p>
+            </div>
+        </div>
+        <button id="hamburger" class="md:hidden text-white text-2xl ml-auto">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav-menu" class="ml-auto hidden md:block">
+                        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-white">
+            <li>
+                <a href="index.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Home
+                </a>
+
+            </li>
+            <li>
+                <a href="profildesa.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Profil Kelurahan
+                </a>
+            </li>
+            <li>
+                <a href="infografis.html"
+               class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Infografis
+                </a>
+            </li>
+            <li>
+                <a href="umkm.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                UMKM
+                </a>
+            </li>
+            <li>
+                <a href="potensidesa.html"
+               class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Potensi Kelurahan
+                </a>
+            </li>
+            <li>
+                <a href="about.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                About
+                </a>
+            </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Menu burger responsif -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('hidden');
+    navMenu.classList.toggle('flex');
+    navMenu.classList.toggle('flex-col');
+    navMenu.classList.add('bg-blue-500/10', 'p-4', 'mt-2','border-[#f4a222]', 'rounded-b-xl');
+  });
+</script>
+
+
+        <!-- Teks di atas gambar -->
+        <div class="absolute inset-0 flex items-center justify-start p-10 z-20 mt-16">
+            <div class="text-white">
+                <div class="border-l-4 border-green-500 pl-4">
+                    <h1 class="text-3xl text-[#f4a222] font-bold" style="font-family: 'Poppins', sans-serif;">Selamat Datang,</h1>
+                    <h2 class="text-4xl font-bold" style="font-family: 'Poppins', sans-serif;">
+                        Di Website Profil<br/>Bukit Harapan
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo di kanan bawah -->
+        <div class="absolute bottom-4 right-4 flex space-x-4 z-30">
+            <img alt="Logo 2" class="w-20 h-20 shadow-md" src="images/jenepontologo.png" />
+        </div>
+    </div>
+
+</body>
+
+
+    <div class="container mx-auto px-8 p-4 text-gray-800">
+        <div class="flex flex-col md:flex-row">
+            <div class="md:w-2/3">
+                <div class="flex items-center mb-1">
+                    <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+                    <h1 class="text-4xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Profil</h1>
+                </div>
+                <h2 class="text-2xl text-gray-500 mb-4" style="font-family: 'Poppins', sans-serif;">Bukit Harapan</h2>
+                <p class="mb-4 text-justify mr-4" style="font-family: 'Poppins', sans-serif;">
+                   Kelurahan Bukit Harapan merupakan salah satu kelurahan yang berada di wilayah administratif Kecamatan Soreang, Kota Parepare, Provinsi Sulawesi Selatan. Nama Bukit Harapan melambangkan cita-cita dan optimisme masyarakat untuk terus berkembang, membangun kehidupan yang lebih baik, dan menjadikan wilayah ini sebagai tempat yang nyaman dan sejahtera bagi seluruh warganya.
+                </p>
+                <p class="mb-4 text-justify mr-4" style="font-family: 'Poppins', sans-serif;">
+                    Kelurahan Bukit Harapan memiliki wilayah dengan luas sebesar 5.56 KM/ 556 Ha dan berbatasan dengan Kelurahan Lapadde (utara), Kampung Baru (selatan), Bumi Harapan (timur), dan Lakessi (barat). Letaknya yang strategis menjadikannya salah satu pusat pertumbuhan sosial dan ekonomi di Kecamatan Soreang.
+ 
+                </p>
+                <p class="mb-4 text-justify mr-4" style="font-family: 'Poppins', sans-serif;">
+                    Kelurahan Bukit Harapan terdiri dari 9 RW dan 27 RT yang memudahkan koordinasi pemerintahan dan mendorong partisipasi warga dalam pembangunan. Fasilitas umum cukup memadai, meliputi pendidikan dari PAUD hingga SMA, tempat ibadah seperti masjid dan musholla, serta layanan kesehatan seperti Posyandu, Puskesmas Pembantu, dan Poskeskel.
+                </p>
+            </div>
+            <div class="md:w-1/2 flex justify-center md:justify-end">
+                <div class="text-center w-full">
+                    <img 
+                        src="images/tuugu.jpg" 
+                        alt="Lokasi Desa Bangkalaloe" 
+                        class="w-full h-400 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                    />
+                    <p class="text-sm text-gray-500 mt-2 font-semibold tracking-wide">
+                        Keluarahan Bukit Harpan, Kecamatan Soreang, Parepare    
+                    </p>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+    <div class="container mx-auto px-8 p-4 bg-[#1A0746] text-white">
+        <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/3 flex justify-center md:justify-end">
+                <div class="text-center">
+                    <img alt="Peta desa bangkalaloe" class="border border-gray-600" height="600" width="400" src="images/Sejarah.jpg"/>
+                    <!-- <p class="text-sm text-[#f4a222] mt-2">Sejarah kelurahan bukit harapan</p> -->
+                </div>
+            </div>
+            <div class="md:w-2/3 ml-4">
+                <div class="flex items-center mb-1">
+                    <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+                    <h1 class="text-4xl font-bold text-[#f4a222]" style="font-family: 'Poppins', sans-serif;">Sejarah</h1>
+                </div>
+                <h2 class="text-2xl text-gray-300 mb-4"style="font-family: 'Poppins', sans-serif;">Kelurahan Bukit Harapan</h2>
+                <p class="mb-4 text-justify text-gray-200"style="font-family: 'Poppins', sans-serif;">
+                    Sebelum tahun 1992 Kelurahan Bukit Harapan adalah bagian dari Kelurahan Wattang Soreang. Pada tahun 1992 Kelurahan Wattang Soreang dimekarkan menjadi 3 kelurahan yaitu, Kelurahan Wattang Soreang, Persiapan Bukit Harapan, Persiapan Bukit Indah.
+                </p>
+                <p class="mb-4 text-justify text-gray-200"style="font-family: 'Poppins', sans-serif;">
+                    Pada tahun 1995 Kelurahan Persiapan Bukit Harapan definitve menjadi Kekurahan Bukit Harapan Kecamatan Soreang, Kota Parepare. 
+                </p>
+                <p class="mb-4 text-justify text-gray-200"style="font-family: 'Poppins', sans-serif;">
+                   Kecamatan Soreang merupakan salah satu kecamatan yang berada diwilayah kota Parepare, dimana kecamatan Soreang dibatasi oleh Kab. Sidrap pada bagian Utara, Kec. Ujung pada bagian selatan, Kab. Pinrang pada bagian Barat, dan Kec. Ujung pada bagian Timur. Dengan luas wilayah 8,33 km2 yang memiliki 7 kelurahan salah satunya adalah Kelurahan Bukit Harapan
+                </p>
+                <p class="mb-4 text-justify text-gray-200"style="font-family: 'Poppins', sans-serif;">
+                   Kelurahan Bukit Harapan  merupakan sebuah kelurahan yang bertempat di Kecamatan Soreang Daerah Kota Parepare, memiliki wilayah dengan Luas sebesar 5.56 KM/556 Ha. Kelurahan ini terdiri dari 9 ORW dan 27 ORT
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="max-w-6xl mx-auto p-4">
+        <div class="flex items-center mb-1">
+                    <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+                    <h1 class="text-4xl font-bold text-gray-800">Peta Lokasi Kelurahan</h1>
+                </div>
+        <p class="text-gray-500">Peta Lokasi Kelurahan Bukit Harapan</p>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-2xl font-bold text-gray-800">Kelurahan Bukit Harapan</h2>
+            <hr class="my-4" />
+            <p class="text-gray-500 font-semibold">Batas Kelurahan</p>
+            <div class="grid grid-cols-2 gap-4 mt-2">
+              <div>
+                <p class="text-gray-500">Utara</p>
+                <p class="text-gray-800">
+                    Kabupaten Pinrang dan Kabupaten Sidrap
+                </p>
+              </div>
+              <div>
+                <p class="text-gray-500">Timur</p>
+                <p class="text-gray-800">Kelurahan Lapadde Kecamatan Ujung</p>
+              </div>
+              <div>
+                <p class="text-gray-500">Selatan</p>
+                <p class="text-gray-800">Kelurahan Bukit Indah</p>
+              </div>
+              <div>
+                <p class="text-gray-500">Barat</p>
+                <p class="text-gray-800">Kelurahan Wattang Soreang</p>
+              </div>
+            </div>
+            <hr class="my-4" />
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <p class="text-gray-500 font-semibold">Garis Lintang</p>
+                <p class="text-gray-800">3°98′90,60″ LS</p>
+              </div>
+              <div>
+                <p class="text-gray-500 font-semibold">Garis Bujur</p>
+                <p class="text-gray-800">119°64′87,31" BT</p>
+              </div>
+              <div>
+                <p class="text-gray-500 font-semibold">Luas Desa</p>
+                <p class="text-gray-800">5.560.000 m²</p>
+              </div>
+            
+              <div>
+                <p class="text-gray-500 font-semibold">Jumlah Penduduk</p>
+                <p class="text-gray-800">3.107 Jiwa</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-center w-full">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23170.188446806653!2d119.63249140281445!3d-3.9807450955764834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d95ba621cb71db9%3A0x6cbac20e09261f65!2sBukit%20Harapan%2C%20Kec.%20Soreang%2C%20Kota%20Parepare%2C%20Sulawesi%20Selatan!5e1!3m2!1sid!2sid!4v1753499405386!5m2!1sid!2sid" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="rounded-lg shadow-md">
+                ></iframe>
+                <p class="text-sm text-gray-500 mt-2">
+                    Lokasi Kelurahan Bukit Harapan, Kecamatan Soreang, Parepare
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    <div class="px-8 p-8 flex bg-[#1A0746] items-center justify-center mt-4 mb-8">
+        <div class="text-center">
+            <h1 class="text-3xl font-bold text-white mb-8">Data Monografi</h1>
+            <div class="flex justify-center space-x-8">
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-[#f4a222]">12.628</p>
+                    <p class="text-gray-100">Jumlah Penduduk</p>
+                </div>
+                <div class=" text-center">
+                    <p class="text-4xl font-bold text-[#f4a222]">5,56 Km<sup>2</sup></p>
+                    <p class="text-gray-100">Luas Kelurahan</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-[#f4a222]">3.814</p>
+                    <p class="text-gray-100">Kepala Keluarga</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-[#f4a222]">27</p>
+                    <p class="text-gray-100">RT</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-[#f4a222]">9</p>
+                    <p class="text-gray-100">RW</p>
+                </div>
+            </div>
+            <div class="mt-8">
+                <a href="#" class="text-green-500 flex items-center justify-center">
+                    <i class="fas fa-arrow-right mr-2"></i> Selengkapnya
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+      
+      document.addEventListener('DOMContentLoaded', function() {
+      
+          const currentLocation = location.pathname.split('/').pop();
+          
+      
+          const navLinks = document.querySelectorAll('.nav-link');
+          navLinks.forEach(link => {
+              
+              link.addEventListener('click', function() {
+              
+                  navLinks.forEach(l => {
+                      l.classList.remove('active');
+                  });
+                  
+              
+                  this.classList.add('active');
+              });
+
+              
+              if(link.getAttribute('href') === currentLocation) {
+                  link.classList.add('active');
+              }
+          });
+
+         
+         const moreDetailsLink = document.querySelector('.mt-8 a');
+            const modal = document.getElementById('monographyModal');
+            const closeModalBtn = document.getElementById('closeModal');
+
+           
+            moreDetailsLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('hidden');
+            });
+
+           
+            closeModalBtn.addEventListener('click', function() {
+                modal.classList.add('hidden');
+            });
+
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        });
+         document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("#nav-menu a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === currentPage) {
+            link.classList.remove("text-white");
+            link.classList.add("text-[#f4a222]");
+            link.classList.add("before:scale-x-100");
+        }
+        });
+    });
+    </script>
+
+    <div id="monographyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center overflow-y-auto">
+        <div class="bg-gray-200 p-8 rounded-lg shadow-lg max-w-2xl w-full relative my-8 max-h-[90vh] overflow-y-auto">
+            <button id="closeModal" class="sticky top-0 right-0 z-10 bg-white text-gray-500 text-3xl float-right clear-both mb-4">&times;</button>
+            
+            <div class="clear-both">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-2xl font-bold text-gray-800">Detail Data Monografi Bukit Harapan</h1>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-gray-500">Provinsi</p>
+                            <p class="text-gray-800 font-semibold">Sulawesi Selatan</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Kode Pos</p>
+                            <p class="text-gray-800 font-semibold">91131</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Kabupaten/Kota</p>
+                            <p class="text-gray-800 font-semibold">Parepare</p>
+                        </div>
+                         <div>
+                            <p class="text-gray-500">Kecamatan</p>
+                            <p class="text-gray-800 font-semibold">Soreang</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Jumlah RT</p>
+                            <p class="text-gray-800 font-semibold">27</p>
+                        </div>
+                         <div>
+                            <p class="text-gray-500">Jumlah RW</p>
+                            <p class="text-gray-800 font-semibold">9</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-gray-500">Luas Wilayah (Km Persegi)</p>
+                            <p class="text-gray-800 font-semibold">5,56</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Jumlah Penduduk</p>
+                            <p class="text-gray-800 font-semibold">± 12.628 </p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500">Jumlah Kepala Keluarga</p>
+                            <p class="text-gray-800 font-semibold">± 3.814 </p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Pekerjaan Utama Penduduk</h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-gray-500">PNS</p>
+                                <p class="text-gray-800 font-semibold">± 286  </p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500">Sopir</p>
+                                <p class="text-gray-800 font-semibold">± 82</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500">Wiraswasta / pedagang</p>
+                                <p class="text-gray-800 font-semibold">± 331</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500">Petani/Pekebun</p>
+                                <p class="text-gray-800 font-semibold">± 83</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500">Karyawan Swasta</p>
+                                <p class="text-gray-800 font-semibold">± 340</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500">Tidak/Belum Bekerja</p>
+                                <p class="text-gray-800 font-semibold">± 2.863 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto px-12 py-1 pb-12">
+        
+        <h1 class="text-center text-4xl font-extrabold mb-6 text-gray-800">Jelajahi</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="profildesa.html" class="block bg-[#1A0746] shadow-lg rounded-lg overflow-hidden border-4 border-gray-800 hover-zoom transform transition duration-500 hover:shadow-2xl">
+                <img alt="A market scene with various food items and a person" class="w-full h-48 object-cover" height="200" src="imagesstruktur/Staf1.jpg" width="600"/>
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2 text-[#f4a222]">Profil Kelurahan</h2>
+                    <p class="text-gray-200">Kelurahan Bukit Harapan memiliki struktur organisasi yang tertata mulai dari Lurah hingga Ketua RT/RW di setiap lingkungan. Disertai dengan visi dan misi</p>
+                </div>
+            </a>
+            <a href="infografis.html" class="block bg-[#1A0746] shadow-lg rounded-lg overflow-hidden border-4 border-gray-800 hover-zoom transform transition duration-500 hover:shadow-2xl">
+                <img alt="A diagram showing the organizational structure of the village" class="w-full h-48 object-cover" height="200" src="imageinfografis/piechart jenis usaha.png" width="600"/>
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2 text-[#f4a222]">Infografis</h2>
+                    <p class="text-gray-200">Informasi penting mengenai Kelurahan Bukit Harapan seperti data kependudukan, fasilitas umum, dan sebaran infrastruktur ditampilkan secara visual melalui infografis yang mudah dipahami.</p>
+                </div>
+            </a>
+            <a href="umkm.html" class="block bg-[#1A0746] shadow-lg rounded-lg overflow-hidden border-4 border-gray-800 hover-zoom transform transition duration-500 hover:shadow-2xl">
+                <img alt="A scenic view of a lake and surrounding landscape" class="w-full h-48 object-cover" height="200" src="images/umkmsampul.jpg" width="600"/>
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2 text-[#f4a222]">UMKM</h2>
+                    <p class="text-gray-200"></p>
+                    <p class="text-gray-200">UMKM di Kelurahan Bukit Harapan menjadi pilar penting dalam menggerakkan roda ekonomi masyarakat. Terdapat berbagai jenis usaha mikro dan kecil yang dikelola oleh warga, mulai dari kuliner, kerajinan tangan, hingga jasa lokal yang menunjang kemandirian ekonomi warga.</p>
+                </div>
+            </a>
+            <a href="potensidesa.html" class="block bg-[#1A0746] shadow-lg rounded-lg overflow-hidden border-4 border-gray-800 hover-zoom transform transition duration-500 hover:shadow-2xl">
+                <img alt="A group of people wearing red uniforms" class="w-full h-48 object-cover" height="200" src="images/potensii.jpg" width="600"/>
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2 text-[#f4a222]">Potensi Desa</h2>
+                    <p class="text-gray-200">Potensi desa seperti sumber daya alam dan potensi alam yang bisa dikembangkan.Kelurahan Bukit Harapan memiliki beragam potensi, baik dari sumber daya alam seperti lahan pertanian dan kehutanan, maupun potensi wisata dan budaya lokal.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="bg-[#1A0746] text-white text-sm">
+  <div class="max-w-screen-xl mx-auto px-6 py-8">
+    <!-- Baris Logo - Judul - Ikon -->
+    <div class="flex flex-col md:flex-row justify-between items-center pb-6">
+      <!-- Logo -->
+      <div class="flex space-x-6 mb-4 md:mb-0">
+        <img alt="Logo 1" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/jenepontologo.png"/>
+        <img alt="Logo 2" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logooposko.png" />
+        <img alt="Logo 3" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logoounhas.png"/>
+        <img alt="Logo 4" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logo.png"/>
+      </div>
+
+      <!-- Judul -->
+      <div class="text-center">
+        <h1 class="text-lg md:text-xl text-[#f4a222] font-bold">Kelurahan Bukit Harapan</h1>
+        <p class="text-xs md:text-sm text-gray-300">Kec. Soreang, Kota Parepare, Sulawesi Selatan</p>
+      </div>
+
+      <!-- Icon Sosial -->
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a class="text-white hover:text-pink-400 transition-colors" href="https://www.instagram.com/kknt114.bukitharapan?igsh=MTY5OGFzdTZ1OWV4eQ==">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a class="text-white hover:text-red-500 transition-colors" href="https://maps.app.goo.gl/APponB3wmpAVHWKg8">
+          <i class="fas fa-map-marker-alt fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Konten -->
+  <footer class="bg-[#1A0746] ">
+    <div class="max-w-screen-xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-8 text-gray-200 text-xs leading-relaxed">
+      <!-- Website Profil Desa -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Website Profil Desa</h4>
+        <p>
+          Website profil Kelurahan merupakan situs web yang memuat informasi dasar mengenai Kelurahan,
+          sejarah, visi dan misi, sampai dengan peta wilayah Kelurahan.
+        </p>
+      </div>
+
+      <!-- Developer -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Developer</h4>
+        <p>
+          Website ini dibuat oleh Muhammad Rafli Dahlan, Mahasiswa KKN Universitas Hasanuddin Gelombang 114,
+          Kelurahan Bukit Harapan pada Juli 2025.
+        </p>
+      </div>
+
+      <!-- Harapan & Tujuan -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Harapan & Tujuan</h4>
+        <p>
+          Situs web ini dibuat untuk tujuan promosi dan publisitas Kelurahan Bukit Harapan agar lebih dikenal
+          oleh khalayak ramai baik di dalam maupun di luar Bukit Harapan.
+        </p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-screen-xl mx-auto px-6 pb-4">
+      <hr class="border-gray-600 mb-2" />
+      <p class="text-center text-gray-400 text-xs">
+        © 2025 Kelurahan Bukit Harapan - All rights reserved
+      </p>
+    </div>
+  </footer>
+</div>
+
+    
+    <script>
+               
+               document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            // Tutup menu saat mengklik di luar menu
+            document.addEventListener('click', function(event) {
+                if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
+    const qrCodeWALink = document.querySelector('.space-y-2 img[src="images/qrcodewa.jpg"]');
+const qrCodeWAModal = document.getElementById('qrCodeWAModal');
+const closeQrCodeWAModalBtn = document.getElementById('closeQrCodeWAModal');
+
+// Fungsi untuk membuka modal QR Code WhatsApp
+qrCodeWALink.addEventListener('click', function() {
+    qrCodeWAModal.classList.remove('hidden');
+});
+
+// Fungsi untuk menutup modal QR Code WhatsApp
+closeQrCodeWAModalBtn.addEventListener('click', function() {
+    qrCodeWAModal.classList.add('hidden');
+});
+
+// Menutup modal jika mengklik di luar area modal
+qrCodeWAModal.addEventListener('click', function(e) {
+    if (e.target === qrCodeWAModal) {
+        qrCodeWAModal.classList.add('hidden');
+    }
+});
+    const qrCodeImage = document.querySelector('.space-y-2 img');
+        const qrCodeModal = document.getElementById('qrCodeModal');
+        const closeQrCodeModalBtn = document.getElementById('closeQrCodeModal');
+        
+        // Fungsi untuk membuka modal QR Code
+        qrCodeImage.addEventListener('click', function() {
+            qrCodeModal.classList.remove('hidden');
+        });
+        
+        // Fungsi untuk menutup modal QR Code
+        closeQrCodeModalBtn.addEventListener('click', function() {
+            qrCodeModal.classList.add('hidden');
+        });
+        
+        // Menutup modal jika mengklik di luar area modal
+        qrCodeModal.addEventListener('click', function(e) {
+            if (e.target === qrCodeModal) {
+                qrCodeModal.classList.add('hidden');
+            }
+        });</script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentLocation = location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.forEach(l => {
+                        l.classList.remove('active');
+                    });
+                    
+                    this.classList.add('active');
+                });
+
+                if(link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+
+            
+
+            // Efek transparan saat scroll
+             window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if ( window.scrollY > 50) {
+                    header.classList.add('bg-opacity-90');
+                    header.classList.add('backdrop-blur-sm');
+                } else {
+                    header.classList.remove('bg-opacity-90');
+                    header.classList.remove('backdrop-blur-sm');
+                }
+            });
+ // Navbar scroll effect
+            window.addEventListener('scroll', function () {
+            const container = document.querySelector('header > div');
+
+            if (window.scrollY > 50) {
+                container.classList.remove('bg-blue-500/10');
+                container.style.backgroundColor = 'rgba(26, 7, 70, 0.6)'; // Saat scroll, transparansi sedang
+                container.style.borderTopLeftRadius = '0px';
+                container.style.borderTopRightRadius = '0px';
+                container.style.borderBottomLeftRadius = '12px';
+                container.style.borderBottomRightRadius = '12px';
+                container.classList.add('backdrop-blur-md', 'shadow-md');
+            } else {
+                container.style.backgroundColor = 'rgba(26, 7, 70, 0.15)'; // Saat di atas, lebih transparan
+                container.classList.remove('shadow-md');
+            }
+            });
+            });
+    
+    </script>
+</body>
+</html> 

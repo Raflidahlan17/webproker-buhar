@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Profil-Bukit Harapan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"
+      rel="stylesheet"
+    />
+     <style>
+        /* Tambahkan transisi untuk efek halus */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        /* Warna teks saat aktif */
+        .nav-link.active {
+            color: #f4a222;
+            font-weight: bold;
+        }
+        /* CSS untuk navbar responsif */
+        @media (max-width: 700px) {
+            #nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #1A0746;
+                padding: 1rem;
+                z-index: 1000;
+            }
+            #nav-menu.active {
+                display: block;
+            }
+            #nav-menu ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            #nav-menu ul li {
+                width: 100%;
+            }
+            #nav-menu ul li a {
+                display: block;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        /* Tambahkan transisi untuk efek halus */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        /* Warna teks saat aktif */
+        .nav-link.active {
+            color: #f4a222;
+            font-weight: bold;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+  <body class="bg-gray-200 pt-14">
+       <!-- 🔥 Navbar transparan dengan garis atas dan burger menu -->
+<header class="fixed top-0 left-0 right-0 z-50 border-t-4 border-[#f4a222] shadow-lg bg-blue-500/10 backdrop-blur-md rounded-b-xl">
+    <div class="container mx-auto flex items-center justify-between p-2">
+        <div class="flex items-center">
+            <img 
+                alt="Logo of Jeneponto" 
+                class="h-12 w-12 mr-4 rounded-full shadow-md hover:rotate-12 transition-transform duration-300" 
+                src="images/logo.png" 
+            />
+            <div>
+                <h1 class="text-[#f4a222] text-xl font-bold tracking-wider">Bukit Harapan</h1>
+                <p class="text-white text-sm opacity-80">Kota Parepare</p>
+            </div>
+        </div>
+        <button id="hamburger" class="md:hidden text-white text-2xl ml-auto">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav-menu" class="ml-auto hidden md:block">
+                        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-white">
+            <li>
+                <a href="index.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Home
+                </a>
+
+            </li>
+            <li>
+                <a href="profildesa.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Profil Kelurahan
+                </a>
+            </li>
+            <li>
+                <a href="infografis.html"
+               class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Infografis
+                </a>
+            </li>
+            <li>
+                <a href="umkm.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                UMKM
+                </a>
+            </li>
+            <li>
+                <a href="potensidesa.html"
+               class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Potensi Kelurahan
+                </a>
+            </li>
+            <li>
+                <a href="about.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                About
+                </a>
+            </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    
+    <div class="font-roboto ml-10 mr-10">
+      <div class="container mx-auto px-4 py-8">
+       <div class="flex flex-col md:flex-row items-center md:items-start">
+        <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-8">
+         <div class="relative">
+          <img alt="Foto Kepala Desa" class="rounded-full border-4 border-[#1A0746]" height="200" src="imagesstruktur/kepaladesa.jpg" width="200"/>
+         </div>
+         <div class="mt-4 text-center md:text-left">
+          <h2 class="text-xl font-bold text-gray-800">
+            ANDI MASDIANAH. S.E
+          </h2>
+          <p class="text-gray-500">
+           Lurah Kelurahan Bukit Harapan 
+          </p>
+         </div>
+        </div>
+        <div class="flex-grow">
+
+
+         <h1 class="text-2xl font-bold text-gray-800">
+          VISI
+         </h1>
+
+         <div class="mt-4 border-l-4 border-gray-300 pl-4">
+          <p class="text-3xl font-bold text-gray-500">
+              TERWUJUDNYA 
+          </p>
+          <p class="text-2xl font-bold text-red-600">
+            BERAKSI
+        </p>
+          <p class="text-gray-700 mb-4">
+              <span class="text-red-600">BER</span>SIH, <span class="text-red-600">A</span>MAN, <span class="text-red-600">K</span>REATIF, <span class="text-red-600">S</span>EJARAH, <span class="text-red-600">I</span>NKLUSIF<span class="text-red-600"></span>
+          </p>
+      </div>
+
+  
+
+         <h1 class="text-2xl font-bold text-gray-800 mt-4">
+          MISI
+         </h1>
+         <div class="mt-4 border-l-4 border-gray-300 pl-4">
+          <p class="text-black mb-2">
+           1. Meningkatkan layanan publik yang cepat, tepat, dan transparan.
+          </p>
+          <p class="text-black mb-2">
+           2. Mendorong partisipasi aktif masyarakat dalam pembangunan kelurahan.
+          </p>
+          <p class="text-black mb-2">
+            3. Membangun lingkungan yang bersih dan tertib melalui kerja sama warga.
+           </p>
+           <p class="text-black mb-2">
+            4. Mengembangkan potensi ekonomi lokal seperti UMKM dan pertanian rakyat.
+           </p>
+            <p class="text-black mb-2">
+              5. Memastikan rasa aman, toleransi, dan inklusi dalam kehidupan sosial masyarakat.
+             </p>
+        </div>
+       </div>
+      </div>
+     </div>
+
+
+
+    <div class="container mx-auto px-8 p-4 bg-[#1A0746] text-white">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-full">             
+          <div class="flex items-center mb-1">
+            <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+            <h1 class="text-4xl font-bold text-[#f4a222]">BAGAN KELURAHAN</h1>
+          </div>
+          <h2 class="text-2xl text-gray-300 mb-4">
+            Struktur Organisasi Kelurahan Bukit Harapan 
+          </h2>
+
+            <div class="p-5">
+              <img
+                alt="Struktur Organisasi Pemerintahan Desa Bangkalaloe"
+                class="w-full h-auto object-cover"
+                height="400"
+                src="imagesstruktur/strukturkelurahan.png"
+                width="1200"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div 
+  x-data="carousel()" 
+  x-init="start()" 
+  class="relative overflow-hidden max-w-6xl mx-auto mt-6 rounded-xl"
+>
+  <!-- Track Slide -->
+  <div 
+  class="flex transition-transform duration-700 ease-in-out"
+  :style="`transform: translateX(-${(active - 1) * 100}%);`"
+>
+  <template x-for="(slide, index) in slides" :key="index">
+    <div class="flex-shrink-0 w-full">
+      <!-- Ubah tinggi di sini -->
+      <div class="relative w-full h-[500px] md:h-[600px]">
+        <img 
+          :src="slide.img" 
+          class="w-full h-full object-cover" 
+          :alt="slide.title"
+        />
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8 text-white">
+          <h3 class="text-4xl font-bold" x-text="slide.title"></h3>
+          <p class="text-lg mt-2" x-text="slide.desc"></p>
+        </div>
+      </div>
+    </div>
+  </template>
+</div>
+
+
+  <!-- Tombol Prev -->
+  <button 
+    @click="prev()" 
+    class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white px-4 py-2"
+  >
+    &#10094;
+  </button>
+
+  <!-- Tombol Next -->
+  <button 
+    @click="next()" 
+    class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black text-white px-4 py-2"
+  >
+    &#10095;
+  </button>
+
+  
+  <!-- Strips (Dots as horizontal bars) -->
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+  <template x-for="i in totalGroups" :key="i">
+    <button 
+      @click="goToGroup(i)" 
+      :class="{
+        'bg-white w-6': Math.ceil(active / groupSize) === i,
+        'bg-gray-400 w-4': Math.ceil(active / groupSize) !== i
+      }"
+      class="h-1 rounded-full transition-all duration-300"
+    ></button>
+  </template>
+</div>
+
+
+</div>
+
+<!-- Alpine.js Carousel Logic -->
+<script>
+function carousel() {
+  return {
+    active: 1,
+    groupSize: 9,
+    get totalGroups() {
+      return Math.ceil(this.slides.length / this.groupSize)
+    },
+    slides: [
+      { img: 'imagesstruktur/Staf1.jpg', title: '', desc: '' },
+      { img: 'imagesstruktur/staf3.jpg', title: '', desc: '' },
+      { img: 'imagesstruktur/staf2.jpg', title: '', desc: '' },
+      { img: 'imagesstruktur/staf4.jpg', title: '', desc: '' },
+      { img: 'imagesstruktur/staf5.jpg', title: '', desc: '' },
+      { img: 'imagesstruktur/staf6.jpg', title: '', desc: '' },
+      { img: 'imagesstruktur/staf7.jpg', title: '', desc: '' },
+      { img: 'imagesstruktur/staf8.jpg', title: '', desc: '' },
+      { img: 'imagesstruktur/staf10.jpg', title: '', desc: '' },
+    ],
+    interval: null,
+    start() {
+      this.interval = setInterval(() => {
+        this.next()
+      }, 3000)
+    },
+    stop() {
+      clearInterval(this.interval)
+    },
+    next() {
+      this.active = this.active === this.slides.length ? 1 : this.active + 1
+    },
+    prev() {
+      this.active = this.active === 1 ? this.slides.length : this.active - 1
+    },
+    goToGroup(groupIndex) {
+      this.active = (groupIndex - 1) * this.groupSize + 1
+    }
+  }
+}
+</script>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+
+
+
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <div class="container mx-auto px-8 p-4 bg-gray-200 text-white">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-full">
+            <div class="flex items-center mb-1">
+              <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+              <h1 class="text-4xl font-bold text-gray-800">PETA KELURAHAN BUKIT HARAPAN</h1>
+            </div>
+            <h2 class="text-2xl text-gray-500 mb-4">
+                Kelurahan Bukit Harapan
+            </h2>
+            
+  
+            <div class="bg-white shadow-md rounded-lg overflow-hidden mt-4">
+              <div class="p-5">
+                <img
+                  alt="Struktur Organisasi Pemerintahan Desa Bangkalaloe"
+                  class="w-full h-auto object-cover"
+                  height="400"
+                  src="imagesstruktur/mapdesa.png"
+                  width="1200"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+ 
+  
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const profileCards = document.querySelectorAll('.profile-card');
+          const modal = document.getElementById('profileModal');
+          const closeModalBtn = document.getElementById('closeModal');
+  
+          const profileData = [
+              {
+                  nama: 'HJ. ST. SYAMSIAH SAAD, S.Pd.i',
+                  jabatan: 'KEPALA DESA',
+                  image: 'imagesstruktur/kepaladesa.jpg',
+                  jenisKelamin: 'Perempuan',
+                  tempatLahir: 'Pokobulo',
+                  tanggalLahir: '06 August 1953',
+                  alamat: 'Pokobulo',
+                  golDarah: '-',
+                  agama: 'Islam',
+                  pendTerakhir: 'Strata 1'
+              },
+              {
+                  nama: 'UMARYADI RASYID, S.T.',
+                  jabatan: 'SEKRETARIS DESA',
+                  image: 'images/orangrandom.png',
+                  jenisKelamin: 'Laki-laki',
+        
+              },
+              
+              // Tambahkan data untuk aparatur desa lainnya
+          ];
+  
+          function fillModal(profileInfo) {
+              document.getElementById('modalProfileImage').src = profileInfo.image;
+              document.getElementById('modalNama').textContent = profileInfo.nama;
+              document.getElementById('modalJenisKelamin').textContent = profileInfo.jenisKelamin;
+              document.getElementById('modalTempatLahir').textContent = profileInfo.tempatLahir;
+              document.getElementById('modalTanggalLahir').textContent = profileInfo.tanggalLahir;
+              document.getElementById('modalAlamat').textContent = profileInfo.alamat;
+              document.getElementById('modalGolDarah').textContent = profileInfo.golDarah;
+              document.getElementById('modalAgama').textContent = profileInfo.agama;
+              document.getElementById('modalPendTerakhir').textContent = profileInfo.pendTerakhir;
+          }
+  
+          profileCards.forEach((card, index) => {
+              card.addEventListener('click', function() {
+                  fillModal(profileData[index]);
+                  modal.classList.remove('hidden');
+              });
+          });
+  
+          closeModalBtn.addEventListener('click', function() {
+              modal.classList.add('hidden');
+          });
+  
+          modal.addEventListener('click', function(e) {
+              if (e.target === modal) {
+                  modal.classList.add('hidden');
+              }
+          });
+      });
+  </script>
+  
+  <div id="profileModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+      <div class="bg-[#10442c] text-white p-8 rounded-lg shadow-2xl w-full max-w-md relative transition-transform transform scale-95 hover:scale-100 max-h-[80vh] overflow-y-auto">
+          <button id="closeModal" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 transition duration-200">&times;</button>
+          <h1 class="text-center text-2xl font-extrabold mb-6">Kepala Desa</h1>
+          <div class="flex justify-center mb-6">
+              <img id="modalProfileImage" alt="Portrait" class="w-28 h-28 rounded-full border-4 border-white shadow-lg" src=""/>
+          </div>
+          <div class="space-y-4">
+              <div class="flex justify-between bg-[#0e3a2b] p-2 rounded-md">
+                  <span class="font-semibold">Nama:</span>
+                  <span id="modalNama" class="text-gray-200"></span>
+              </div>
+              <div class="flex justify-between bg-[#0e3a2b] p-2 rounded-md">
+                  <span class="font-semibold">Jenis Kelamin:</span>
+                  <span id="modalJenisKelamin" class="text-gray-200"></span>
+              </div>
+              <div class="flex justify-between bg-[#0e3a2b] p-2 rounded-md">
+                  <span class="font-semibold">Tempat Lahir:</span>
+                  <span id="modalTempatLahir" class="text-gray-200"></span>
+              </div>
+              <div class="flex justify-between bg-[#0e3a2b] p-2 rounded-md">
+                  <span class="font-semibold">Tanggal Lahir:</span>
+                  <span id="modalTanggalLahir" class="text-gray-200"></span>
+              </div>
+              <div class="flex justify-between bg-[#0e3a2b] p-2 rounded-md">
+                  <span class="font-semibold">Alamat:</span>
+                  <span id="modalAlamat" class="text-gray-200"></span>
+              </div>
+              <div class="flex justify-between bg-[#0e3a2b] p-2 rounded-md">
+                  <span class="font-semibold">Gol Darah:</span>
+                  <span id="modalGolDarah" class="text-gray-200"></span>
+              </div>
+              <div class="flex justify-between bg-[#0e3a2b] p-2 rounded-md">
+                  <span class="font-semibold">Agama:</span>
+                  <span id="modalAgama" class="text-gray-200"></span>
+              </div>
+              <div class="flex justify-between bg-[#0e3a2b] p-2 rounded-md">
+                  <span class="font-semibold">Pend Terakhir:</span>
+                  <span id="modalPendTerakhir" class="text-gray-200"></span>
+              </div>
+          </div>
+      </div>
+  </div>
+
+<div class="bg-[#1A0746] text-white text-sm">
+  <div class="max-w-screen-xl mx-auto px-6 py-8">
+    <!-- Baris Logo - Judul - Ikon -->
+    <div class="flex flex-col md:flex-row justify-between items-center pb-6">
+      <!-- Logo -->
+      <div class="flex space-x-6 mb-4 md:mb-0">
+        <img alt="Logo 1" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/jenepontologo.png"/>
+        <img alt="Logo 2" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logooposko.png" />
+        <img alt="Logo 3" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logoounhas.png"/>
+        <img alt="Logo 4" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logo.png"/>
+      </div>
+
+      <!-- Judul -->
+      <div class="text-center">
+        <h1 class="text-lg md:text-xl text-[#f4a222] font-bold">Kelurahan Bukit Harapan</h1>
+        <p class="text-xs md:text-sm text-gray-300">Kec. Soreang, Kota Parepare, Sulawesi Selatan</p>
+      </div>
+
+      <!-- Icon Sosial -->
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a class="text-white hover:text-pink-400 transition-colors" href="https://www.instagram.com/kknt114.bukitharapan?igsh=MTY5OGFzdTZ1OWV4eQ==">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a class="text-white hover:text-red-500 transition-colors" href="https://maps.app.goo.gl/APponB3wmpAVHWKg8">
+          <i class="fas fa-map-marker-alt fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Konten -->
+  <footer class="bg-[#1A0746] ">
+    <div class="max-w-screen-xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-8 text-gray-200 text-xs leading-relaxed">
+      <!-- Website Profil Desa -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Website Profil Desa</h4>
+        <p>
+          Website profil Kelurahan merupakan situs web yang memuat informasi dasar mengenai Kelurahan,
+          sejarah, visi dan misi, sampai dengan peta wilayah Kelurahan.
+        </p>
+      </div>
+
+      <!-- Developer -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Developer</h4>
+        <p>
+          Website ini dibuat oleh Muhammad Rafli Dahlan, Mahasiswa KKN Universitas Hasanuddin Gelombang 114,
+          Kelurahan Bukit Harapan pada Juli 2025.
+        </p>
+      </div>
+
+      <!-- Harapan & Tujuan -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Harapan & Tujuan</h4>
+        <p>
+          Situs web ini dibuat untuk tujuan promosi dan publisitas Kelurahan Bukit Harapan agar lebih dikenal
+          oleh khalayak ramai baik di dalam maupun di luar Bukit Harapan.
+        </p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-screen-xl mx-auto px-6 pb-4">
+      <hr class="border-gray-600 mb-2" />
+      <p class="text-center text-gray-400 text-xs">
+        © 2025 Kelurahan Bukit Harapan - All rights reserved
+      </p>
+    </div>
+  </footer>
+</div>
+
+<script>
+const qrCodeWALink = document.querySelector('.space-y-2 img[src="images/qrcodewa.jpg"]');
+const qrCodeWAModal = document.getElementById('qrCodeWAModal');
+const closeQrCodeWAModalBtn = document.getElementById('closeQrCodeWAModal');
+
+// Fungsi untuk membuka modal QR Code WhatsApp
+qrCodeWALink.addEventListener('click', function() {
+qrCodeWAModal.classList.remove('hidden');
+});
+
+// Fungsi untuk menutup modal QR Code WhatsApp
+closeQrCodeWAModalBtn.addEventListener('click', function() {
+qrCodeWAModal.classList.add('hidden');
+});
+
+// Menutup modal jika mengklik di luar area modal
+qrCodeWAModal.addEventListener('click', function(e) {
+if (e.target === qrCodeWAModal) {
+    qrCodeWAModal.classList.add('hidden');
+}
+});
+const qrCodeImage = document.querySelector('.space-y-2 img');
+    const qrCodeModal = document.getElementById('qrCodeModal');
+    const closeQrCodeModalBtn = document.getElementById('closeQrCodeModal');
+    
+    // Fungsi untuk membuka modal QR Code
+    qrCodeImage.addEventListener('click', function() {
+        qrCodeModal.classList.remove('hidden');
+    });
+    
+    // Fungsi untuk menutup modal QR Code
+    closeQrCodeModalBtn.addEventListener('click', function() {
+        qrCodeModal.classList.add('hidden');
+    });
+    
+    // Menutup modal jika mengklik di luar area modal
+    qrCodeModal.addEventListener('click', function(e) {
+        if (e.target === qrCodeModal) {
+            qrCodeModal.classList.add('hidden');
+        }
+    });</script>
+
+
+
+<style>
+  .nav-link.active {
+      position: relative;
+  }
+  .nav-link.active::after {
+      content: '';
+      position: absolute;
+      inset: -5px;
+      z-index: -1;
+      border-radius: 0.5rem;
+  }
+</style>
+
+   <script>
+
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        
+        if (hamburger && navMenu) {
+          hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Hamburger clicked'); // Debug log
+            navMenu.classList.toggle('active');
+            
+            // Change hamburger icon
+            const icon = hamburger.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+              icon.classList.remove('fa-bars');
+              icon.classList.add('fa-times');
+            } else {
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+            }
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+              navMenu.classList.remove('active');
+              const icon = hamburger.querySelector('i');
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+            }
+          });
+
+          // Close menu when clicking on nav links (mobile)
+          const navLinks = navMenu.querySelectorAll('a');
+          navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              navMenu.classList.remove('active');
+              const icon = hamburger.querySelector('i');
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+            });
+          });
+        }
+
+        </script>
+          
+ <script>
+// Efek transparan saat scroll
+             window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if ( window.scrollY > 50) {
+                    header.classList.add('bg-opacity-90');
+                    header.classList.add('backdrop-blur-sm');
+                } else {
+                    header.classList.remove('bg-opacity-90');
+                    header.classList.remove('backdrop-blur-sm');
+                }
+            });
+ // Navbar scroll effect
+            window.addEventListener('scroll', function () {
+            const container = document.querySelector('header > div');
+
+            if (window.scrollY > 50) {
+                container.classList.remove('bg-blue-500/10');
+                container.style.backgroundColor = 'rgba(26, 7, 70, 0.6)'; // Saat scroll, transparansi sedang
+                container.style.borderTopLeftRadius = '0px';
+                container.style.borderTopRightRadius = '0px';
+                container.style.borderBottomLeftRadius = '12px';
+                container.style.borderBottomRightRadius = '12px';
+                container.classList.add('backdrop-blur-md', 'shadow-md');
+            } else {
+                container.classList.remove('bg-blue-500/10');
+                container.style.backgroundColor = 'rgba(26, 7, 70, 0.6)'; // Saat scroll, transparansi sedang
+                container.style.borderTopLeftRadius = '0px';
+                container.style.borderTopRightRadius = '0px';
+                container.style.borderBottomLeftRadius = '12px';
+                container.style.borderBottomRightRadius = '12px';
+                container.classList.add('backdrop-blur-md', 'shadow-md');
+            }
+            });
+             document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("#nav-menu a");
+            const currentPage = window.location.pathname.split("/").pop();
+
+            navLinks.forEach(link => {
+            const linkPage = link.getAttribute("href");
+            if (linkPage === currentPage) {
+                link.classList.remove("text-white");
+                link.classList.add("text-[#f4a222]");
+                link.classList.add("before:scale-x-100");
+            }
+            });
+        });
+            
+</script>
+
+
+
+  </body>
+</html>

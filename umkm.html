@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>UMKM-Bukit Harapan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tambahkan transisi untuk efek halus */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        /* Warna teks saat aktif */
+        .nav-link.active {
+            color: #f4a222;
+            font-weight: bold;
+        }
+        /* CSS untuk navbar responsif */
+        @media (max-width: 700px) {
+            #nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #1A0746;
+                padding: 1rem;
+                z-index: 1000;
+            }
+            #nav-menu.active {
+                display: block;
+            }
+            #nav-menu ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            #nav-menu ul li {
+                width: 100%;
+            }
+            #nav-menu ul li a {
+                display: block;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        /* Tambahkan transisi untuk efek halus */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        /* Warna teks saat aktif */
+        .nav-link.active {
+            color: #f4a222;
+            font-weight: bold;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 pt-14">
+     <!-- 🔥 Navbar transparan dengan garis atas dan burger menu -->
+<header class="fixed top-0 left-0 right-0 z-50 border-t-4 border-[#f4a222] shadow-lg bg-blue-500/10 backdrop-blur-md rounded-b-xl">
+    <div class="container mx-auto flex items-center justify-between p-2">
+        <div class="flex items-center">
+            <img 
+                alt="Logo of Jeneponto" 
+                class="h-12 w-12 mr-4 rounded-full shadow-md hover:rotate-12 transition-transform duration-300" 
+                src="images/logo.png" 
+            />
+            <div>
+                <h1 class="text-[#f4a222] text-xl font-bold tracking-wider">Bukit Harapan</h1>
+                <p class="text-white text-sm opacity-80">Kota Parepare</p>
+            </div>
+        </div>
+        <button id="hamburger" class="md:hidden text-white text-2xl ml-auto">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav-menu" class="ml-auto hidden md:block">
+                        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-white">
+            <li>
+                <a href="index.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Home
+                </a>
+
+            </li>
+            <li>
+                <a href="profildesa.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Profil Kelurahan
+                </a>
+            </li>
+            <li>
+                <a href="infografis.html"
+               class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Infografis
+                </a>
+            </li>
+            <li>
+                <a href="umkm.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                UMKM
+                </a>
+            </li>
+            <li>
+                <a href="potensidesa.html"
+               class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Potensi Kelurahan
+                </a>
+            </li>
+            <li>
+                <a href="about.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                About
+                </a>
+            </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <section class="relative">
+        <img alt="Nature Cottage" class="w-full h-96 object-cover" height="600" src="images/umkm.jpg" width="1920"/>
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center text-white p-6">
+            <h1 class="text-4xl md:text-5xl text-[#f4a222] text-shadow font-bold transition-transform transform hover:scale-105">
+                UMKM Kelurahan Bukit Harapan
+            </h1>
+            <p class="mt-4 text-lg md:text-xl transition-opacity text-shadow duration-300 hover:opacity-80">
+                Temukan berbagai usaha mikro, kecil, dan menengah yang berkembang di Kelurahan Bukit Harapan.
+            </p>
+        
+        </div>
+    </section>
+
+
+ <div class="container mx-auto p-4">
+  <h2 class="text-2xl font-bold text-[#1A0746] mb-6">Data Usaha Kelurahan Bukit Harapan</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="imagesumkm/rumputlaut.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h4 class="text-lg font-bold">US. Abdul Rahman</h4>
+        <p class="text-sm"><strong>Pemilik:</strong> Abdul Rahman</p>
+        <p class="text-sm"><strong>Jenis Usaha:</strong> Budidaya Rumput Laut</p>
+        <p class="text-sm"><strong>Alamat:</strong> Jalan Lauleng</p>
+        <p class="text-sm"><strong>Telepon:</strong> 0852 8049 1126</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="imagesumkm/bolucuke.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h4 class="text-lg font-bold">US. Murni</h4>
+        <p class="text-sm"><strong>Pemilik:</strong> Murni</p>
+        <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Bolu Cukke</p>
+        <p class="text-sm"><strong>Alamat:</strong> Jalan Lauleng</p>
+        <p class="text-sm"><strong>Telepon:</strong> -</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="imagesumkm/kerajinan.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h4 class="text-lg font-bold">US. Mustafa</h4>
+        <p class="text-sm"><strong>Pemilik:</strong> Mustafa</p>
+        <p class="text-sm"><strong>Jenis Usaha:</strong> Kerajinan Tangan</p>
+        <p class="text-sm"><strong>Alamat:</strong> Jalan Lauleng</p>
+        <p class="text-sm"><strong>Telepon:</strong> 0838 6257 3512</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="imagesumkm/lpg.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h4 class="text-lg font-bold">Toko LPG 3Kg</h4>
+        <p class="text-sm"><strong>Pemilik:</strong> Muh. Arief A. Zainuddin</p>
+        <p class="text-sm"><strong>Jenis Usaha:</strong> Gas LPG 3Kg</p>
+        <p class="text-sm"><strong>Alamat:</strong> Jalan H. Laele</p>
+        <p class="text-sm"><strong>Telepon:</strong> 0813 4374 8292</p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <img src="imagesumkm/tokokue.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h4 class="text-lg font-bold">Mom’s Cake</h4>
+        <p class="text-sm"><strong>Pemilik:</strong> Suhaeni</p>
+        <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Kue</p>
+        <p class="text-sm"><strong>Alamat:</strong> Jalan H. A. Muh. Arsyad</p>
+        <p class="text-sm"><strong>Telepon:</strong> 0823 3737 3617</p>
+      </div>
+    </div>
+
+<!-- Card 9 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/Tempe.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">UD. Barokah</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Mualim</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Tahu dan Tempe</p>
+    <p class="text-sm"><strong>Alamat:</strong> Jalan Kesadaran</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0853 9835 9854</p>
+  </div>
+</div>
+
+<!-- Card 10 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/dodol.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">US. Nurjannah</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Nurjannah</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Dodol</p>
+    <p class="text-sm"><strong>Alamat:</strong> Jalan Laupe</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0813 3722 7461</p>
+  </div>
+</div>
+
+<!-- Card 11 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/kacangsembunyi.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">US. Raerawati</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Raerawati</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Kacang Sembunyi</p>
+    <p class="text-sm"><strong>Alamat:</strong> Jalan Melingkar</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0812 1638 6116</p>
+  </div>
+</div>
+
+<!-- Card 12 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/Keripik.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">US. Ramlah</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Ramlah Mustapa</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Keripik Ubi</p>
+    <p class="text-sm"><strong>Alamat:</strong> Jalan Laupe</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0831 6603 9658</p>
+  </div>
+</div>
+
+<!-- Card 16 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/cemilan.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">Cemilan Sultan</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Haidir Pasak</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan makanan ringan & minuman</p>
+    <p class="text-sm"><strong>Alamat:</strong> Jalan Drs. H. Muh. Yusuf Majid</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0852 5552 9155</p>
+  </div>
+</div>
+
+<!-- Card 17 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/lele.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">Budidaya Anugerah Mandiri</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Bahriah</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Budidaya Ikan Lele</p>
+    <p class="text-sm"><strong>Alamat:</strong> Jalan Drs. H. Muh. Yusuf Majid</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0853 4156 0677</p>
+  </div>
+</div>
+
+<!-- Card 18 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/telurasin.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">US. Nurdin</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Nurdin</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Telur Asin</p>
+    <p class="text-sm"><strong>Alamat:</strong> Jalan Jenderal Ahmad Yani KM. 5</p>
+    <p class="text-sm"><strong>Telepon:</strong>085256229775</p>
+  </div>
+</div>
+
+<!-- Card 19 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/kueberas.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">Kedai Barokah</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Sakka Matto</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Kue Beras</p>
+    <p class="text-sm"><strong>Alamat:</strong> Jalan Jompie</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0852 9801 1503</p>
+  </div>
+</div>
+
+<!-- Card 21 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/asam.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">Asam Resky 5 Putra</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Fatahuddin</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Asam</p>
+    <p class="text-sm"><strong>Alamat:</strong> Jalan Taiba</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0823 9605 9409</p>
+  </div>
+</div>
+
+<!-- Card 23 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/roti.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">US. Yulianti</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Yulianti</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Roti</p>
+    <p class="text-sm"><strong>Alamat:</strong> Komp. Perumahan Sosial No. 16</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0852 4213 0181</p>
+  </div>
+</div>
+
+<!-- Card 25 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/KueKering.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">US. Indo Upe</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Indo Upe</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Kue Kering</p>
+    <p class="text-sm"><strong>Alamat:</strong> BTN Pondok Indah, Soreang</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0853 4141 0308</p>
+  </div>
+</div>
+
+<!-- Card 26 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/Bumbupecel.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">US. Ririn Sinawati</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Ririn Sinawati</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Bumbu Pecel</p>
+    <p class="text-sm"><strong>Alamat:</strong> BTN Pondok Indah, Soreang</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0813 4372 3944</p>
+  </div>
+</div>
+
+<!-- Card 27 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+  <img src="imagesumkm/tokokue.jpg" alt="Foto Usaha" class="w-full h-40 object-cover">
+  <div class="p-4">
+    <h4 class="text-lg font-bold">US. Wahidah</h4>
+    <p class="text-sm"><strong>Pemilik:</strong> Wahidah</p>
+    <p class="text-sm"><strong>Jenis Usaha:</strong> Pembuatan Kue Tradisional</p>
+    <p class="text-sm"><strong>Alamat:</strong> BTN Pondok Indah, Soreang</p>
+    <p class="text-sm"><strong>Telepon:</strong> 0812 4454 6729</p>
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="bg-[#1A0746] text-white text-sm">
+  <div class="max-w-screen-xl mx-auto px-6 py-8">
+    <!-- Baris Logo - Judul - Ikon -->
+    <div class="flex flex-col md:flex-row justify-between items-center pb-6">
+      <!-- Logo -->
+      <div class="flex space-x-6 mb-4 md:mb-0">
+        <img alt="Logo 1" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/jenepontologo.png"/>
+        <img alt="Logo 2" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logooposko.png" />
+        <img alt="Logo 3" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logoounhas.png"/>
+        <img alt="Logo 4" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logo.png"/>
+      </div>
+
+      <!-- Judul -->
+      <div class="text-center">
+        <h1 class="text-lg md:text-xl text-[#f4a222] font-bold">Kelurahan Bukit Harapan</h1>
+        <p class="text-xs md:text-sm text-gray-300">Kec. Soreang, Kota Parepare, Sulawesi Selatan</p>
+      </div>
+
+      <!-- Icon Sosial -->
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a class="text-white hover:text-pink-400 transition-colors" href="https://www.instagram.com/kknt114.bukitharapan?igsh=MTY5OGFzdTZ1OWV4eQ==">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a class="text-white hover:text-red-500 transition-colors" href="https://maps.app.goo.gl/APponB3wmpAVHWKg8">
+          <i class="fas fa-map-marker-alt fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Konten -->
+  <footer class="bg-[#1A0746] ">
+    <div class="max-w-screen-xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-8 text-gray-200 text-xs leading-relaxed">
+      <!-- Website Profil Desa -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Website Profil Desa</h4>
+        <p>
+          Website profil Kelurahan merupakan situs web yang memuat informasi dasar mengenai Kelurahan,
+          sejarah, visi dan misi, sampai dengan peta wilayah Kelurahan.
+        </p>
+      </div>
+
+      <!-- Developer -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Developer</h4>
+        <p>
+          Website ini dibuat oleh Muhammad Rafli Dahlan, Mahasiswa KKN Universitas Hasanuddin Gelombang 114,
+          Kelurahan Bukit Harapan pada Juli 2025.
+        </p>
+      </div>
+
+      <!-- Harapan & Tujuan -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Harapan & Tujuan</h4>
+        <p>
+          Situs web ini dibuat untuk tujuan promosi dan publisitas Kelurahan Bukit Harapan agar lebih dikenal
+          oleh khalayak ramai baik di dalam maupun di luar Bukit Harapan.
+        </p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-screen-xl mx-auto px-6 pb-4">
+      <hr class="border-gray-600 mb-2" />
+      <p class="text-center text-gray-400 text-xs">
+        © 2025 Kelurahan Bukit Harapan - All rights reserved
+      </p>
+    </div>
+  </footer>
+</div>
+
+
+
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        
+        if (hamburger && navMenu) {
+          hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Hamburger clicked'); // Debug log
+            navMenu.classList.toggle('active');
+            
+            // Change hamburger icon
+            const icon = hamburger.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+              icon.classList.remove('fa-bars');
+              icon.classList.add('fa-times');
+            } else {
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+            }
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+              navMenu.classList.remove('active');
+              const icon = hamburger.querySelector('i');
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+            }
+          });
+
+          // Close menu when clicking on nav links (mobile)
+          const navLinks = navMenu.querySelectorAll('a');
+          navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              navMenu.classList.remove('active');
+              const icon = hamburger.querySelector('i');
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+            });
+          });
+        }
+    const qrCodeWALink = document.querySelector('.space-y-2 img[src="images/qrcodewa.jpg"]');
+const qrCodeWAModal = document.getElementById('qrCodeWAModal');
+const closeQrCodeWAModalBtn = document.getElementById('closeQrCodeWAModal');
+
+// Fungsi untuk membuka modal QR Code WhatsApp
+qrCodeWALink.addEventListener('click', function() {
+    qrCodeWAModal.classList.remove('hidden');
+});
+
+// Fungsi untuk menutup modal QR Code WhatsApp
+closeQrCodeWAModalBtn.addEventListener('click', function() {
+    qrCodeWAModal.classList.add('hidden');
+});
+
+// Menutup modal jika mengklik di luar area modal
+qrCodeWAModal.addEventListener('click', function(e) {
+    if (e.target === qrCodeWAModal) {
+        qrCodeWAModal.classList.add('hidden');
+    }
+});
+    const qrCodeImage = document.querySelector('.space-y-2 img');
+        const qrCodeModal = document.getElementById('qrCodeModal');
+        const closeQrCodeModalBtn = document.getElementById('closeQrCodeModal');
+        
+        // Fungsi untuk membuka modal QR Code
+        qrCodeImage.addEventListener('click', function() {
+            qrCodeModal.classList.remove('hidden');
+        });
+        
+        // Fungsi untuk menutup modal QR Code
+        closeQrCodeModalBtn.addEventListener('click', function() {
+            qrCodeModal.classList.add('hidden');
+        });
+        
+        // Menutup modal jika mengklik di luar area modal
+        qrCodeModal.addEventListener('click', function(e) {
+            if (e.target === qrCodeModal) {
+                qrCodeModal.classList.add('hidden');
+            }
+        });</script>
+
+
+
+    <style>
+        .nav-link.active {
+            position: relative;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            z-index: -1;
+            border-radius: 0.5rem;
+        }
+    </style>
+    <script>
+
+        // Script untuk mengatur navbar aktif
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dapatkan URL halaman saat ini
+            const currentLocation = location.pathname.split('/').pop();
+            
+            // Pilih semua link navigasi
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Loop melalui setiap link
+            navLinks.forEach(link => {
+                // Tambahkan event listener klik
+                link.addEventListener('click', function() {
+                    // Hapus kelas active dari semua link
+                    navLinks.forEach(l => {
+                        l.classList.remove('active');
+                    });
+                    
+                    // Tambahkan kelas active ke link yang diklik
+                    this.classList.add('active');
+                });
+
+                // Tandai link yang sesuai dengan halaman saat ini
+                if(link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const currentLocation = location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(l => {
+                    l.classList.remove('active');
+                });
+                
+                this.classList.add('active');
+            });
+
+            if(link.getAttribute('href') === currentLocation) {
+                link.classList.add('active');
+            }
+        });
+
+                    // Efek transparan saat scroll
+             window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if ( window.scrollY > 50) {
+                    header.classList.add('bg-opacity-90');
+                    header.classList.add('backdrop-blur-sm');
+                } else {
+                    header.classList.remove('bg-opacity-90');
+                    header.classList.remove('backdrop-blur-sm');
+                }
+            });
+ // Navbar scroll effect
+            window.addEventListener('scroll', function () {
+            const container = document.querySelector('header > div');
+
+            if (window.scrollY > 50) {
+                container.classList.remove('bg-blue-500/10');
+                container.style.backgroundColor = 'rgba(26, 7, 70, 0.6)'; // Saat scroll, transparansi sedang
+                container.style.borderTopLeftRadius = '0px';
+                container.style.borderTopRightRadius = '0px';
+                container.style.borderBottomLeftRadius = '12px';
+                container.style.borderBottomRightRadius = '12px';
+                container.classList.add('backdrop-blur-md', 'shadow-md');
+            } else {
+                container.classList.remove('bg-blue-500/10');
+                container.style.backgroundColor = 'rgba(26, 7, 70, 0.6)'; // Saat scroll, transparansi sedang
+                container.style.borderTopLeftRadius = '0px';
+                container.style.borderTopRightRadius = '0px';
+                container.style.borderBottomLeftRadius = '12px';
+                container.style.borderBottomRightRadius = '12px';
+                container.classList.add('backdrop-blur-md', 'shadow-md');
+            }
+            });
+            });
+
+        // Script untuk toggle dropdown
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', function() {
+                this.classList.toggle('hidden');
+            });
+        });
+
+    function toggleDropdown(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('hidden');
+        }
+         document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("#nav-menu a");
+            const currentPage = window.location.pathname.split("/").pop();
+
+            navLinks.forEach(link => {
+            const linkPage = link.getAttribute("href");
+            if (linkPage === currentPage) {
+                link.classList.remove("text-white");
+                link.classList.add("text-[#f4a222]");
+                link.classList.add("before:scale-x-100");
+            }
+            });
+        });
+    </script>
+
+</body>
+</html>

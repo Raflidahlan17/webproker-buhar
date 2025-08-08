@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bukit Harapan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        /* Tambahkan transisi untuk efek halus */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        /* Warna teks saat aktif */
+        .nav-link.active {
+            color: #f4a222;
+            font-weight: bold;
+        }
+        /* CSS untuk navbar responsif */
+        @media (max-width: 700px) {
+            #nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #1A0746;
+                padding: 1rem;
+                z-index: 1000;
+            }
+            #nav-menu.active {
+                display: block;
+            }
+            #nav-menu ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            #nav-menu ul li {
+                width: 100%;
+            }
+            #nav-menu ul li a {
+                display: block;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        /* Tambahkan transisi untuk efek halus */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        /* Warna teks saat aktif */
+        .nav-link.active {
+            color: #f4a222;
+            font-weight: bold;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 pt-14">
+     <!-- 🔥 Navbar transparan dengan garis atas dan burger menu -->
+<header class="fixed top-0 left-0 right-0 z-50 border-t-4 border-[#f4a222] shadow-lg bg-blue-500/10 backdrop-blur-md rounded-b-xl">
+    <div class="container mx-auto flex items-center justify-between p-2">
+        <div class="flex items-center">
+            <img 
+                alt="Logo of Jeneponto" 
+                class="h-12 w-12 mr-4 rounded-full shadow-md hover:rotate-12 transition-transform duration-300" 
+                src="images/logo.png" 
+            />
+            <div>
+                <h1 class="text-[#f4a222] text-xl font-bold tracking-wider">Bukit Harapan</h1>
+                <p class="text-white text-sm opacity-80">Kota Parepare</p>
+            </div>
+        </div>
+        <button id="hamburger" class="md:hidden text-white text-2xl ml-auto">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav-menu" class="ml-auto hidden md:block">
+                        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 text-white">
+            <li>
+                <a href="index.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Home
+                </a>
+
+            </li>
+            <li>
+                <a href="profildesa.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Profil Kelurahan
+                </a>
+            </li>
+            <li>
+                <a href="infografis.html"
+               class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Infografis
+                </a>
+            </li>
+            <li>
+                <a href="umkm.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                UMKM
+                </a>
+            </li>
+            <li>
+                <a href="potensidesa.html"
+               class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                Potensi Kelurahan
+                </a>
+            </li>
+            <li>
+                <a href="about.html"
+                class="relative font-bold px-3 py-2 text-white transition-all duration-300
+                        before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:translate-x-[-50%]
+                        before:h-[2px] before:w-full before:scale-x-0 before:origin-center before:bg-[#f4a222]
+                        before:transition-transform before:duration-300 hover:before:scale-x-100">
+                About
+                </a>
+            </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+   
+     
+       <div class="max-w-6xl mx-auto p-6">
+       
+
+        <div class="flex items-center mb-1">
+            <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+            <h1 class="text-4xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Tentang Website</h1>
+        </div>
+        <h2 class="text-2xl font-semibold text-gray-500 mb-4">
+         Bukit Harapan
+        </h2>
+        <p class="mb-4 text-justify">
+        Website profil Kelurahan Bukit Harapan ini dibuat oleh mahasiswa KKN Kelurahan Bukit Harapan Universitas Hasanuddin guna memenuhi program kerja pembuatan website profil dan informasi Kelurahan Bukit Harapan. Terima kasih kepada Lurah, aparat kelurahan, dan masyarakat setempat yang juga ikut berpartisipasi dalam pengerjaan website ini.
+        </p>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+         Tentang Mahasiswa KKN
+        </h3>
+        <p class="mb-4 text-justify">
+        Mahasiswa KKN Gel. 114 Universitas Hasanuddin yang ditempatkan di Kelurahan Bukit Harapan merupakan penanggung jawab dalam pembuatan website ini. Posko KKN ini diketuai oleh Fitra Ramadhani dan beranggotakan 9 orang yang berasal dari beberapa jurusan berbeda dari Universitas Hasanuddin. Posko ini menaruh harapan semoga kehadirannya mampu memberikan dampak positif bagi kelurahan ini dan masyarakat sekitar dengan mengadakan program kerja yang sesuai dengan kondisi Bukit Harapan saat ini.
+        </p>
+        <p class="mb-4 text-justify">
+        Di antara program kerja yang disusun oleh peserta KKN di kelurahan ini, salah satunya yaitu pembuatan website profil dan informasi Kelurahan Bukit Harapan. Semakin berkembangnya inovasi di bidang teknologi menuntut kita untuk bisa beradaptasi dengan hal tersebut. Tujuannya tentu untuk mempermudah segala akses kerja yang akan dilakukan.
+        </p>
+         <p class="mb-4 text-justify">
+       Tujuan disusunnya program kerja “Pembuatan Website Profil dan Informasi Kelurahan Bukit Harapan” ini adalah agar bisa menjadi wadah bagi seluruh masyarakat untuk mengakses informasi mengenai Kelurahan Bukit Harapan dengan mudah. Selain itu, website ini nantinya akan menghadirkan informasi mengenai Kelurahan Bukit Harapan sehingga diharapkan mampu menarik perhatian masyarakat umum, membuat Kelurahan Bukit Harapan lebih dikenal, dan tentunya lebih maju.
+        </p>
+        <div class="flex flex-col md:flex-row md:justify-center md:space-x-6 space-y-6 md:space-y-0 mb-8">
+  <!-- Foto pembuat website -->
+  <div class="flex flex-col items-center text-center">
+    <img alt="Foto pembuat website" class="rounded-full shadow-lg w-40 h-40 md:w-64 md:h-64 object-cover" src="imageabout/rafl.jpg" />
+    <p class="mt-2 text-sm text-gray-600">MUHAMMAD RAFLI DAHLAN</p>
+  </div>
+
+  <!-- Foto kami seposko -->
+  <div class="flex flex-col items-center text-center">
+    <img alt="Foto kami seposko" class="rounded-lg shadow-lg w-64 h-40 md:w-74 md:h-64 object-cover" src="imageabout/fotokami.jpg" />
+    <p class="mt-2 text-sm text-gray-600">Mahasiswa KKN Gel. 114 Unhas Kelurahan Bukit Harapan</p>
+  </div>
+
+  <!-- Logo posko KKN -->
+  <div class="flex flex-col items-center text-center">
+    <img alt="Logo KKN kami" class="rounded-lg shadow-md w-40 h-40 md:w-64 md:h-64 object-contain" src="images/logooposko.png" />
+    <p class="mt-2 text-sm text-gray-600">Logo Posko KKN Unhas kelurahan Bukit Harapan</p>
+  </div>
+</div>
+
+       
+       </div>
+       <div class="bg-[#1A0746] text-white text-sm">
+  <div class="max-w-screen-xl mx-auto px-6 py-8">
+    <!-- Baris Logo - Judul - Ikon -->
+    <div class="flex flex-col md:flex-row justify-between items-center pb-6">
+      <!-- Logo -->
+      <div class="flex space-x-6 mb-4 md:mb-0">
+        <img alt="Logo 1" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/jenepontologo.png"/>
+        <img alt="Logo 2" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logooposko.png" />
+        <img alt="Logo 3" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logoounhas.png"/>
+        <img alt="Logo 4" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="images/logo.png"/>
+      </div>
+
+      <!-- Judul -->
+      <div class="text-center">
+        <h1 class="text-lg md:text-xl text-[#f4a222] font-bold">Kelurahan Bukit Harapan</h1>
+        <p class="text-xs md:text-sm text-gray-300">Kec. Soreang, Kota Parepare, Sulawesi Selatan</p>
+      </div>
+
+      <!-- Icon Sosial -->
+      <div class="flex space-x-6 mt-4 md:mt-0">
+        <a class="text-white hover:text-pink-400 transition-colors" href="https://www.instagram.com/kknt114.bukitharapan?igsh=MTY5OGFzdTZ1OWV4eQ==">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a class="text-white hover:text-red-500 transition-colors" href="https://maps.app.goo.gl/APponB3wmpAVHWKg8">
+          <i class="fas fa-map-marker-alt fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Konten -->
+  <footer class="bg-[#1A0746] ">
+    <div class="max-w-screen-xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-8 text-gray-200 text-xs leading-relaxed">
+      <!-- Website Profil Desa -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Website Profil Desa</h4>
+        <p>
+          Website profil Kelurahan merupakan situs web yang memuat informasi dasar mengenai Kelurahan,
+          sejarah, visi dan misi, sampai dengan peta wilayah Kelurahan.
+        </p>
+      </div>
+
+      <!-- Developer -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Developer</h4>
+        <p>
+          Website ini dibuat oleh Muhammad Rafli Dahlan, Mahasiswa KKN Universitas Hasanuddin Gelombang 114,
+          Kelurahan Bukit Harapan pada Juli 2025.
+        </p>
+      </div>
+
+      <!-- Harapan & Tujuan -->
+      <div>
+        <h4 class="text-[#f4a222] font-semibold mb-2">Harapan & Tujuan</h4>
+        <p>
+          Situs web ini dibuat untuk tujuan promosi dan publisitas Kelurahan Bukit Harapan agar lebih dikenal
+          oleh khalayak ramai baik di dalam maupun di luar Bukit Harapan.
+        </p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-screen-xl mx-auto px-6 pb-4">
+      <hr class="border-gray-600 mb-2" />
+      <p class="text-center text-gray-400 text-xs">
+        © 2025 Kelurahan Bukit Harapan - All rights reserved
+      </p>
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+    <main>
+        <!-- Konten utama akan ditambahkan di sini -->
+    </main>
+    <style>
+        .nav-link.active {
+            position: relative;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            z-index: -1;
+            border-radius: 0.5rem;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            // Tutup menu saat mengklik di luar menu
+            document.addEventListener('click', function(event) {
+                if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+        // Script untuk mengatur navbar aktif
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dapatkan URL halaman saat ini
+            const currentLocation = location.pathname.split('/').pop();
+            
+            // Pilih semua link navigasi
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Loop melalui setiap link
+            navLinks.forEach(link => {
+                // Tambahkan event listener klik
+                link.addEventListener('click', function() {
+                    // Hapus kelas active dari semua link
+                    navLinks.forEach(l => {
+                        l.classList.remove('active');
+                    });
+                    
+                    // Tambahkan kelas active ke link yang diklik
+                    this.classList.add('active');
+                });
+
+                // Tandai link yang sesuai dengan halaman saat ini
+                if(link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const currentLocation = location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(l => {
+                    l.classList.remove('active');
+                });
+                
+                this.classList.add('active');
+            });
+
+            if(link.getAttribute('href') === currentLocation) {
+                link.classList.add('active');
+            }
+        });
+
+                   // Efek transparan saat scroll
+             window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if ( window.scrollY > 50) {
+                    header.classList.add('bg-opacity-90');
+                    header.classList.add('backdrop-blur-sm');
+                } else {
+                    header.classList.remove('bg-opacity-90');
+                    header.classList.remove('backdrop-blur-sm');
+                }
+            });
+ // Navbar scroll effect
+            window.addEventListener('scroll', function () {
+            const container = document.querySelector('header > div');
+
+            if (window.scrollY > 50) {
+                container.classList.remove('bg-blue-500/10');
+                container.style.backgroundColor = 'rgba(26, 7, 70, 0.6)'; // Saat scroll, transparansi sedang
+                container.style.borderTopLeftRadius = '0px';
+                container.style.borderTopRightRadius = '0px';
+                container.style.borderBottomLeftRadius = '12px';
+                container.style.borderBottomRightRadius = '12px';
+                container.classList.add('backdrop-blur-md', 'shadow-md');
+            } else {
+                container.classList.remove('bg-blue-500/10');
+                container.style.backgroundColor = 'rgba(26, 7, 70, 0.6)'; // Saat scroll, transparansi sedang
+                container.style.borderTopLeftRadius = '0px';
+                container.style.borderTopRightRadius = '0px';
+                container.style.borderBottomLeftRadius = '12px';
+                container.style.borderBottomRightRadius = '12px';
+                container.classList.add('backdrop-blur-md', 'shadow-md');
+            }
+            });
+            });
+     document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll("#nav-menu a");
+            const currentPage = window.location.pathname.split("/").pop();
+
+            navLinks.forEach(link => {
+            const linkPage = link.getAttribute("href");
+            if (linkPage === currentPage) {
+                link.classList.remove("text-white");
+                link.classList.add("text-[#f4a222]");
+                link.classList.add("before:scale-x-100");
+            }
+            });
+        });
+    </script>
+</body>
+</html>
